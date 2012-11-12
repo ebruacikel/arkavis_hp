@@ -1,4 +1,6 @@
 ArkavisHp::Application.routes.draw do
+  devise_for :admins
+
   resources :games,       :only => [:show]
   resources :jobs,        :only => [:show]
   resources :categories,  :only => [:show]
