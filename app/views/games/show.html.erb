@@ -1,0 +1,58 @@
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span3">
+			<div class="well sidebar-nav affix">
+				<ul class="nav nav-list">
+					<li class="nav-header">game previews</li>
+					<% @all_games.each do |game| %>
+					<li <%= "class='active'" if (@game == game) %>>
+						<%= link_to "#{game.title} (#{game.genre})", game %>
+					</li>
+					<% end %>
+				</ul>
+			</div><!--/.well -->
+		</div><!--/span-->
+		<div class="span9">
+			<div class="hero-unit" style="background-color:#ddd">
+				<h1><%= @game.title %></h1>
+				<p><%= @game.slogan %></p>
+				<p>
+					<a class="fancybox" rel="screenshots" href="screens/ss2.png"><img class="preview-image" src="screens/ss2_thumb.png" /></a>
+					<a class="fancybox" rel="screenshots" href="screens/ss5.png"><img class="preview-image" src="screens/ss5_thumb.png" /></a>
+					<a class="fancybox" rel="screenshots" href="screens/ss4.jpg"><img class="preview-image" src="screens/ss4_thumb.jpg" /></a>
+					<a class="fancybox" rel="screenshots" href="screens/ss1.jpg"><img class="preview-image" src="screens/ss1_thumb.jpg" /></a>
+				</p>
+				<p><a id="play-button" class="btn btn-primary btn-large">PLAY NOW &raquo;</a>
+				</p>
+			</div>
+			<div class="row-fluid">
+				<div class="span20">
+					<h2>about</h2>
+					<p>RoboRacers is a casual racing game made in Unity3D that combines the arcade feel of Mario Kart with the high-speed flow from WipeOut into a casual racing experience.</p>
+					<p>
+						<%= raw @game.features.gsub("\n","<br/>") %>
+					</p> 
+				</div><!--/span-->
+			</div><!--/row-->
+			<div class="row-fluid">
+				<div class="span20">
+					<h2>features</h2>
+					<p>	
+						<%= raw @game.features.gsub("\n","<br/>") %>
+					</p>
+				</div><!--/span-->
+
+			</div><!--/row-->
+			<div class="row-fluid">
+				<div class="span20">
+					<h2>contact us</h2>
+					<p>We're curious about your feedback!</p>
+					<p><a class="btn" href="mailto:vlad@arkavis.com">Email us &raquo;</a></p>
+					
+				</div><!--/span-->
+			</div><!--/row-->
+		</div><!--/span-->
+	</div><!--/row-->
+</div><!--/.fluid-container-->
+
+

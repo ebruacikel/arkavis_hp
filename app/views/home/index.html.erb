@@ -1,0 +1,22 @@
+
+<!-- Main hero unit for a primary marketing message or call to action -->
+<div class="hero-unit" id="logo" style="background-color:white; width:520px;margin-left:auto; margin-right:auto">
+  <h1><img src="/assets/logo.png"></h1>
+  <p><br/>arkavis siam Co., Ltd. is an upcoming game design studio, located in Bangkok Thailand. Our focus is in casual social games.</p><br/>
+</div>
+
+<!-- Example row of columns -->
+<div class="row">
+<% @games.each do |game| %>
+  <div class="span4">
+    <h2><%= link_to game.title, game %></h2>
+		<p><%= raw game.about %></p>
+    <p><%= link_to "View game", game, :class => "btn"  %></p>
+  </div>
+<% end %>
+  <div class="span4">
+    <h2>more to come</h2>
+    <p>Our upcoming games will focus on new genres as well as multiplayer support. Follow us on Facebook to stay updated!</p>
+  </div>
+</div>
+      

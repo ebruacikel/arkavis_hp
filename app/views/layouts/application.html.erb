@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>arkavis.com</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Le styles -->
+	<%= stylesheet_link_tag "application", :media => "all" %>
+	<style type="text/css">
+	body {
+		padding-top: 60px;
+		padding-bottom: 40px;
+	}
+	a{
+		color:black;
+	}
+	</style>
+	<%= csrf_meta_tags %>
+	<%= render "general/html5_shim" %>
+	<%= render "general/google_analytics" %>
+</head>
+<body>
+	<%= render "general/menu" %>
+	<div style="width:100%" id="outer">
+		<div class="container" style="margin-left:auto; margin-right:auto">
+			<%= yield %>
+			<hr>
+			<%= render "general/footer" %>		
+		</div> <!-- /container -->
+	</div>
+	<%= javascript_include_tag "application" %>
+	<script type="text/javascript">
+	$(function(){
+  	/*
+		$('#outer').hide();
+		$('#menu').hide();
+		$('#menu').slideDown(1000);
+		$('#outer').fadeIn(1000);
+		*/
+	})
+	</script>
+</body>
+</html>

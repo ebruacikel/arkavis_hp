@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  position: MyString
+  description: MyText
+  benefits: MyText
+  requirements: MyText
+
+two:
+  position: MyString
+  description: MyText
+  benefits: MyText
+  requirements: MyText
