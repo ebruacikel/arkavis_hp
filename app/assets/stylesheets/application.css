@@ -21,3 +21,8 @@
 #login-status a {
 	text-decoration:none;
 }
+
+.post-body{
+	width: 55%;
+	text-align: justify;
+}
