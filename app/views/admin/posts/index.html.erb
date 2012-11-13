@@ -1,25 +1,20 @@
-<h1>Listing posts</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Body</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<h1>Blog posts</h1>
+ 
 <% @posts.each do |post| %>
-  <tr>
-    <td><%= post.title %></td>
-    <td><%= post.body %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+  
+   <h2><%= link_to post.title, post %></h2> 
+    
+     <p><%=  post.created_at.strftime("%B %d, %Y")%></p>
+
+     <p><%= truncate( post.body, :length => 100)%></p>
+    
+  
+   <%= link_to 'Show', edit_admin_post_path(post), :class => "btn" %> 
+   <%= link_to 'Edit', edit_admin_post_path(post), :class => "btn" %>   
+   <%= link_to 'Destroy', edit_admin_post_path(post), confirm: 'Are you sure?', method: :delete, :class => "btn" %>
+ 
+   <% end %>
 
 <br />
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'New Post', new_admin_post_path, :class => "btn" %> 

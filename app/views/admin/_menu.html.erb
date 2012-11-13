@@ -9,40 +9,19 @@
       </a>
       <a class="brand" href="/">arkavis.com</a>
       <div class="nav-collapse collapse">
-        <ul class="nav">
-          <li class="active"><a href="/">Pages</a></li>
-          <!--<li><a href="#about">About</a></li>-->
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Games <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-             <% @all_games.each do |game| %>               
-              <li><%= link_to game.title, edit_admin_game_path(game) %></li>
-             <% end %>
-              <!--<li class="divider"></li>
-              <li class="nav-header">Upcoming</li>
-              <li><a href="#">Shooting Game (TBA)</a></li>
-              <li><a href="#">Running Game (TBA)</a></li>-->
-            </ul>
-          </li>
-           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Jobs <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="jobs.html#pos1">3D Artist</a></li>
-              <li><a href="jobs.html#pos2">Platform Developer</a></li>
-              <li><a href="jobs.html#intern">Internship</a></li>
-            </ul>
-          </li>
-				<% @all_pages.each do |p| %>
-          <li><%= link_to p.title, p %></li>
-				<% end %>
-        </ul>
+        <ul class="nav"> 
+		  <li><%= link_to("Pages", admin_pages_path) %></li>
+		  <li><%= link_to("Posts", admin_posts_path) %></li>
+		  <li><%= link_to("Games", admin_games_path) %></li>
+		  <li><%= link_to("Jobs", admin_jobs_path) %></li>
+		 </ul>
         <div id="login-status">
 		   <% if admin_signed_in? %>
-					 <%= current_admin.email%> |
-					<%= link_to "Sign out", destroy_admin_session_path, :method => :delete %>
-				  <% else %>
+			  <%= current_admin.email%> |
+	       <%= link_to "Sign out", destroy_admin_session_path, :method => :delete %>
+			  <% else %>
 					<%= link_to "Sign in", new_admin_session_path %>
-				  <% end %>
+		    <% end %>
 		 </div>
       </div><!--/.nav-collapse -->
     </div>

@@ -1,9 +1,11 @@
-class PostsController < ApplicationController
-  
-  # GET /posts
-  # GET /posts.json
+class Admin::PostsController < ApplicationController
+ before_filter :authenticate_admin!
+ layout "admin"
+
+ 
   def index
     @posts = Post.all
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
@@ -44,11 +46,9 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
-        format.json { render json: @post, status: :created, location: @post }
+        format.html { redirect_to admin_post_path(@post), notice: 'Post was successfully created.' }
       else
         format.html { render action: "new" }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -60,12 +60,10 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.update_attributes(params[:post])
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
-        format.json { head :no_content }
+        format.html { redirect_to admin_post_path(@post), notice: 'Post was successfully updated.' }
       else
         format.html { render action: "edit" }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
-      end
+     end
     end
   end
 
@@ -76,8 +74,7 @@ class PostsController < ApplicationController
     @post.destroy
 
     respond_to do |format|
-      format.html { redirect_to posts_url }
-      format.json { head :no_content }
+      format.html { redirect_to admin_posts_url }
     end
   end
 end

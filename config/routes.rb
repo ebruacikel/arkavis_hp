@@ -1,16 +1,17 @@
 ArkavisHp::Application.routes.draw do
-  resources :posts
-
   devise_for :admins
 
   resources :games,       :only => [:show]
-  resources :jobs,        :only => [:show]
+  resources :jobs,        :only => [:index]
   resources :categories,  :only => [:show]
   resources :pages,       :only => [:show] 
-
+  resources :posts,       :only => [:show, :index]
+  
   namespace :admin do
   	resources :games
   	resources :pages
+    resources :posts
+    resources :jobs
   end
 
 	root :to => 'home#index'

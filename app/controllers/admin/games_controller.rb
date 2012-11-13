@@ -1,9 +1,9 @@
 class Admin::GamesController < ApplicationController
 	before_filter :authenticate_admin!
 	layout "admin"
-
+	
   def index
-    @games = Game.all
+    @games = Game.page(params[:page]).per(3)
   end
 
   def show
