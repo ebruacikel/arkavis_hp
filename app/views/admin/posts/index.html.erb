@@ -6,7 +6,7 @@
    <p><%=  post.created_at.strftime("%B %d, %Y")%></p>
    
     <div class="post-body">
-      <%= truncate( post.body, :length => 155)%> <br />
+      <%= truncate( post.body, :length => 200)%> <br />
     </div>
   
    <%= link_to 'Show', edit_admin_post_path(post), :class => "btn" %> 
@@ -16,5 +16,6 @@
    <% end %>
 
 <br />
+<%= paginate @posts %>
 
 <%= link_to 'New Post', new_admin_post_path, :class => "btn" %> 

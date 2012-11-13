@@ -4,7 +4,7 @@ class Admin::PostsController < ApplicationController
 
  
   def index
-    @posts = Post.all
+    @posts = Post.page(params[:page]).per(4)
 
     respond_to do |format|
       format.html # index.html.erb
