@@ -15,8 +15,9 @@
 #login-status {
 	float:right;
 	padding: 10px;
+	color: #CCCCCC;
 }
 
-#login-status a{
+#login-status a {
 	text-decoration:none;
 }

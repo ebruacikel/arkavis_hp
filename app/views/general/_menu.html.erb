@@ -45,21 +45,7 @@
 					<li>
 						<a href="contact.html">Contact</a>
 					</li>
-					
-
-					<% flash.each do |name, msg| %>
-					<%= content_tag :div, msg, :id => "flash_#{name}" %>
-					<% end %>
-				</ul>
-				
-				<div id="login-status">
-				  <% if admin_signed_in? %>
-					Signed in as <%= current_admin.email%>
-					<%= link_to "Sign out", destroy_admin_session_path, :method => :delete %>
-				  <% else %>
-					<%= link_to "Sign in", new_admin_session_path %>
-				  <% end %>
-				 </div>
+				</ul>				
 			</div><!--/.nav-collapse -->
 		</div>
 	</div>

@@ -36,6 +36,14 @@
           <li><%= link_to p.title, p %></li>
 				<% end %>
         </ul>
+        <div id="login-status">
+		   <% if admin_signed_in? %>
+					 <%= current_admin.email%> |
+					<%= link_to "Sign out", destroy_admin_session_path, :method => :delete %>
+				  <% else %>
+					<%= link_to "Sign in", new_admin_session_path %>
+				  <% end %>
+		 </div>
       </div><!--/.nav-collapse -->
     </div>
   </div>
