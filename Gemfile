@@ -9,6 +9,7 @@ gem 'rails', '3.2.2'
 gem "pg"
 gem 'devise'
 gem 'json'
+gem 'heroku'
 
 #Pagination
 gem 'kaminari'
@@ -29,6 +30,14 @@ gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
+
+
+
+
+
+
+
+ 
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
