@@ -20,10 +20,6 @@
     <%= f.text_area :body %>
   </div>
   <div class="field">
-    <%= f.label :category_id %><br />
-    <%= f.select :category_id, options_for_select(Category.all.collect{|c|[ c.name, c.id]}, @page.category_id) %>
-  </div>
-  <div class="field">
     <%= f.label :featured %><br />
     <%= f.check_box :featured %>
   </div>
