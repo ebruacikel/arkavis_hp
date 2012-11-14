@@ -2,16 +2,16 @@
  
 <% @posts.each do |post| %>
   
-   <h2><%= link_to post.title, post %></h2> 
+   <h2><%= link_to post.title, admin_post_path(post) %></h2> 
    <p><%=  post.created_at.strftime("%B %d, %Y")%></p>
    
     <div class="post-body">
       <%= truncate( post.body, :length => 200)%> <br />
     </div>
   
-   <%= link_to 'Show', edit_admin_post_path(post), :class => "btn" %> 
+   <%= link_to 'Show', admin_post_path(post), :class => "btn" %> 
    <%= link_to 'Edit', edit_admin_post_path(post), :class => "btn" %>   
-   <%= link_to 'Destroy', edit_admin_post_path(post), confirm: 'Are you sure?', method: :delete, :class => "btn" %>
+   <%= link_to 'Destroy', admin_post_path(post), confirm: 'Are you sure?', method: :delete, :class => "btn" %>
  
    <% end %>
 

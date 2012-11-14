@@ -3,7 +3,7 @@ class Admin::GamesController < ApplicationController
 	layout "admin"
 	
   def index
-    @games = Game.page(params[:page]).per(3)
+    @games = Game.page(params[:page]).per(4)
   end
 
   def show
@@ -38,7 +38,7 @@ class Admin::GamesController < ApplicationController
 
     respond_to do |format|
       if @game.update_attributes(params[:game])
-        format.html { redirect_to admin_games_path, :notice => 'Game was successfully updated.' }
+        format.html { redirect_to admin_game_path(@game), :notice => 'Game was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render :action => "edit" }

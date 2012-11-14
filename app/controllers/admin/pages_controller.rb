@@ -3,7 +3,7 @@ class Admin::PagesController < ApplicationController
   layout "admin"
 
   def index
-    @pages = Page.all
+    @pages = Page.order("id DESC")
 
     respond_to do |format|
       format.html # index.html.erb
@@ -43,7 +43,7 @@ class Admin::PagesController < ApplicationController
 
     respond_to do |format|
       if @page.save
-        format.html { redirect_to admin_pages_path, :notice => 'Page was successfully created.' }
+        format.html { redirect_to admin_page_path(@page), :notice => 'Page was successfully created.' }
         format.json { render :json => @page, :status => :created, :location => @page }
       else
         format.html { render :action => "new" }
@@ -59,7 +59,7 @@ class Admin::PagesController < ApplicationController
 
     respond_to do |format|
       if @page.update_attributes(params[:page])
-        format.html { redirect_to @page, :notice => 'Page was successfully updated.' }
+        format.html { redirect_to admin_page_path(@page), :notice => 'Page was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render :action => "edit" }

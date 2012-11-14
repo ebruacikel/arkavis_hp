@@ -1,7 +1,7 @@
 <h1>Listing pages</h1>
 
 <table border="1" class="table table-striped">
-  <tr class="header">
+  <tr>
     <th>Title</th>
     <th>Body</th>
     <th>Featured</th>
@@ -13,9 +13,11 @@
     <td><%= link_to(page.title, page ) %></td>
     <td><%= page.body %></td>
     <td><%= page.featured %></td>
-    <td><%= link_to 'Show', admin_page_path(page) %>
-		<%= link_to 'Edit', edit_admin_page_path(page) %>
-   		<%= link_to 'Destroy', admin_page_path(page), :confirm => 'Are you sure?', :method => :delete %></td>
+    <td>
+	    <%= link_to 'Show', admin_page_path(page) %>
+        <%= link_to 'Edit', edit_admin_page_path(page) %>
+        <%= link_to 'Destroy', admin_page_path(page), :confirm => 'Are you sure?', :method => :delete %>
+    </td>
   </tr>
 <% end %>
 </table>
