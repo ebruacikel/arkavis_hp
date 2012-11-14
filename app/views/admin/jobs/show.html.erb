@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Position:</b>
+  <%= @job.position %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @job.description %>
+</p>
+
+<p>
+  <b>Benefits:</b>
+  <%= @job.benefits %>
+</p>
+
+<p>
+  <b>Requirements:</b>
+  <%= @job.requirements %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_admin_job_path(@job), :class => "btn" %>
+<%= link_to 'Back', admin_jobs_path, :class => "btn" %>

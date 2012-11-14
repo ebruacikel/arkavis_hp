@@ -1,0 +1,25 @@
+<h1>Listing jobs</h1>
+
+
+
+<% @jobs.each do |job| %>
+
+	<h2><%= link_to  job.position, admin_job_path(job) %></h2>
+     <p><%=  job.created_at.strftime("%B %d, %Y")%></p>
+   
+    <div class="job-body">
+      <%= truncate( job.description, :length => 200)%> <br />
+    </div>
+    	<%= link_to 'Show', admin_job_path(job), :class => "btn" %> 
+   		<%= link_to 'Edit', edit_admin_job_path(job), :class => "btn" %>   
+   		<%= link_to 'Destroy', admin_job_path(job), confirm: 'Are you sure?', method: :delete, :class => "btn" %>
+
+<% end %>
+
+
+<br />
+<%= paginate @jobs %>
+
+<%= link_to 'New Job', new_admin_job_path, :class => "btn" %>
+
+
