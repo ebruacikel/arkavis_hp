@@ -1,29 +1,57 @@
-<h1>Listing jobs</h1>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span3">
+			<div class="well sidebar-nav affix">
+				<ul class="nav nav-list nav-list-fixed-left">
+					<li class="nav-header">Positions</li>
+								
+					<% @jobs.each do |job| %>
+					<li>
+						<a href="#pos<%= job.id.to_s %>"><%= job.position %></a>
+					</li>
+					<% end %>
+					
+			    </ul>
+			</div><!--/.well -->
+		</div><!--/span-->
+		<div class="span9">
+			<div class="hero-unit" style="background-color:#ddd">
+				<h1>jobs@arkavis</h1>
+				<p>
+					join the team
+				</p>
+				</p>
+			</div>
 
-<table border="1" class="table table-striped">
-  <tr>
-    <th>Position</th>
-    <th>Description</th>
-    <th>Benefits</th>
-    <th>Requirements</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+			<% @jobs.each do |job| %>
 
-<% @jobs.each do |job| %>
-  <tr>
-    <td><%= job.position %></td>
-    <td><%= job.description %></td>
-    <td><%= job.benefits %></td>
-    <td><%= job.requirements %></td>
-    <td><%= link_to 'Show', job, :class => "btn" %></td>
-    <td><%= link_to 'Edit', edit_job_path(job), :class => "btn" %></td>
-    <td><%= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete, :class => "btn" %></td>
-  </tr>
-<% end %>
-</table>
+			<div class="row-fluid" id="pos<%= job.id.to_s %>">
+				<div class="span20">
+					<h2><%= job.position %></h2>
+					<p>
+						<%= job.description %>
+					</p>
 
-<br />
+					<h4>Required skills and experience</h4>
+					<p>
+						<%= job.requirements %>
+					</p>
+					<h4>Your Benefits</h4>
+					<p>
+						<%= job.benefits %>
+					</p>
+				</div><!--/span-->
+			</div><!--/row-->
+			<hr />
 
-<%= link_to 'New Job', new_job_path, :class => "btn" %>
+			<% end %>
+
+		</div><!--/span-->
+	</div><!--/row-->
+
+</div><!--/.fluid-container-->
+
+</div>
+</div>
+
+

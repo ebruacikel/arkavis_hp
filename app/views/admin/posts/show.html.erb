@@ -6,7 +6,7 @@
  
   
  	 <div class="post-body">
-      <p><%= @post.body %></p>
+      <p><%= raw simple_format(@post.body) %></p>
 	 </div>
   
 

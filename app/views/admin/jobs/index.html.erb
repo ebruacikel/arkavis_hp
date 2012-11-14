@@ -8,7 +8,7 @@
      <p><%=  job.created_at.strftime("%B %d, %Y")%></p>
    
     <div class="job-body">
-      <%= truncate( job.description, :length => 200)%> <br />
+      <%= raw truncate( simple_format(job.description), :length => 200)%> <br />
     </div>
     	<%= link_to 'Show', admin_job_path(job), :class => "btn" %> 
    		<%= link_to 'Edit', edit_admin_job_path(job), :class => "btn" %>   
