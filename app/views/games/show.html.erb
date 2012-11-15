@@ -17,10 +17,11 @@
 				<h1><%= @game.title %></h1>
 				<p><%= @game.slogan %></p>
 				<p>
-					<a class="fancybox" rel="screenshots" href="screens/ss2.png"><img class="preview-image" src="screens/ss2_thumb.png" /></a>
-					<a class="fancybox" rel="screenshots" href="screens/ss5.png"><img class="preview-image" src="screens/ss5_thumb.png" /></a>
-					<a class="fancybox" rel="screenshots" href="screens/ss4.jpg"><img class="preview-image" src="screens/ss4_thumb.jpg" /></a>
-					<a class="fancybox" rel="screenshots" href="screens/ss1.jpg"><img class="preview-image" src="screens/ss1_thumb.jpg" /></a>
+					<a class="fancybox" rel="screenshots" href=""><img class="preview-image" src="<%= @game.screenshot_1.url(:thumb) %>" /></a>
+					<a class="fancybox" rel="screenshots" href=""><img class="preview-image" src="<%= @game.screenshot_2.url(:thumb) %>" /></a>
+					<a class="fancybox" rel="screenshots" href=""><img class="preview-image" src="<%= @game.screenshot_3.url(:thumb) %>" /></a>
+					<a class="fancybox" rel="screenshots" href=""><img class="preview-image" src="<%= @game.screenshot_4.url(:thumb) %>" /></a>
+					<a class="fancybox" rel="screenshots" href=""><img class="preview-image" src="<%= @game.screenshot_5.url(:thumb) %>" /></a>
 				</p>
 				<p><a id="play-button" class="btn btn-primary btn-large">PLAY NOW &raquo;</a>
 				</p>

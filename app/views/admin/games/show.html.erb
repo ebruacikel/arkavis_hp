@@ -20,10 +20,22 @@
   <%= @game.features %>
 </p>
 
-<p>
+
+<p >
   <b>Sreenshots:</b>
-  <%= @game.screenshot_1_file_name %>; <%= @game.screenshot_2_file_name %>; <%= @game.screenshot_3_file_name %>; <%= @game.screenshot_4_file_name %>; <%= @game.screenshot_5_file_name %>
+  
+ 	 <p class="float-left"><%= image_tag @game.screenshot_1.url(:thumb) %> <br /> <%= @game.screenshot_1_file_name %>;</p>
+	 <p class="float-left"><%= image_tag @game.screenshot_2.url(:thumb) %> <br /> <%= @game.screenshot_2_file_name %>;</p>    
+	 <p class="float-left"><%= image_tag @game.screenshot_3.url(:thumb) %> <br /> <%= @game.screenshot_3_file_name %>;</p>  
+	 <p class="float-left"><%= image_tag @game.screenshot_4.url(:thumb) %> <br /> <%= @game.screenshot_4_file_name %>;</p>  
+	 <p class="float-left"><%= image_tag @game.screenshot_5.url(:thumb) %> <br /> <%= @game.screenshot_5_file_name %> </p>  
+	 
 </p>
 
+<div class="clear-left">
+	
+ <br />
+ 
 <%= link_to 'Edit', edit_admin_game_path(@game), :class => "btn" %>
 <%= link_to 'Back', admin_games_path, :class => "btn" %>
+</div>

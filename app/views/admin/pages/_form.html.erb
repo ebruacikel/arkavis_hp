@@ -20,11 +20,12 @@
     <%= f.text_area :body %>
   </div>
   <div class="field">
-    <%= f.label :featured %><br />
-    <%= f.check_box :featured %>
+    <p class="float-left"><%= f.check_box :featured %>&nbsp</p> 
+    <p><%= f.label :featured %></p>   
   </div>
   
   <div class="actions">
+  	<br />
     <%= f.submit %>
   </div>
 <% end %>

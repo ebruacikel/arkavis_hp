@@ -26,3 +26,12 @@
 	width: 55%;
 	text-align: justify;
 }
+
+
+.float-left{
+	float: left;
+	
+}
+.clear-left{
+	clear: left;
+}
