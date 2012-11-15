@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121114042108) do
+ActiveRecord::Schema.define(:version => 20121115022713) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -36,9 +36,29 @@ ActiveRecord::Schema.define(:version => 20121114042108) do
     t.string   "slogan"
     t.text     "about"
     t.text     "features"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
     t.string   "genre"
+    t.string   "screenshot_1_file_name"
+    t.string   "screenshot_1_content_type"
+    t.integer  "screenshot_1_file_size"
+    t.datetime "screenshot_1_updated_at"
+    t.string   "screenshot_2_file_name"
+    t.string   "screenshot_2_content_type"
+    t.integer  "screenshot_2_file_size"
+    t.datetime "screenshot_2_updated_at"
+    t.string   "screenshot_3_file_name"
+    t.string   "screenshot_3_content_type"
+    t.integer  "screenshot_3_file_size"
+    t.datetime "screenshot_3_updated_at"
+    t.string   "screenshot_4_file_name"
+    t.string   "screenshot_4_content_type"
+    t.integer  "screenshot_4_file_size"
+    t.datetime "screenshot_4_updated_at"
+    t.string   "screenshot_5_file_name"
+    t.string   "screenshot_5_content_type"
+    t.integer  "screenshot_5_file_size"
+    t.datetime "screenshot_5_updated_at"
   end
 
   create_table "jobs", :force => true do |t|

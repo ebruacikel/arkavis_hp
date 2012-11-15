@@ -3,7 +3,7 @@ class Admin::GamesController < ApplicationController
 	layout "admin"
 	
   def index
-    @games = Game.page(params[:page]).per(4)
+    @games = Game.order("id DESC").page(params[:page]).per(4)
   end
 
   def show

@@ -36,4 +36,14 @@ ArkavisHp::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => "arkavishp",
+    :access_key_id => "AKIAISEA2QIV7AACXLPQ",
+    :secret_access_key => "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"
+  }
+}
 end

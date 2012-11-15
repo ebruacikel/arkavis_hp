@@ -20,6 +20,16 @@ ArkavisHp::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => "arkavishp",
+    :access_key_id => "AKIAISEA2QIV7AACXLPQ",
+    :secret_access_key => "2nXl4szLC6CmG//mvezQd0Xs0uTLEnKHp7ODQGZC"
+  }
+}
+
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
 
