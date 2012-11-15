@@ -17,11 +17,11 @@
 				<h1><%= @game.title %></h1>
 				<p><%= @game.slogan %></p>
 				<p>
-					<a class="fancybox" rel="screenshots" href=""><img class="preview-image" src="<%= @game.screenshot_1.url(:thumb) %>" /></a>
-					<a class="fancybox" rel="screenshots" href=""><img class="preview-image" src="<%= @game.screenshot_2.url(:thumb) %>" /></a>
-					<a class="fancybox" rel="screenshots" href=""><img class="preview-image" src="<%= @game.screenshot_3.url(:thumb) %>" /></a>
-					<a class="fancybox" rel="screenshots" href=""><img class="preview-image" src="<%= @game.screenshot_4.url(:thumb) %>" /></a>
-					<a class="fancybox" rel="screenshots" href=""><img class="preview-image" src="<%= @game.screenshot_5.url(:thumb) %>" /></a>
+					<a class="fancybox" rel="screenshots" href="<%= @game.screenshot_1.url(:medium) %>"><img class="preview-image" src="<%= @game.screenshot_1.url(:thumb) %>" /></a>
+					<a class="fancybox" rel="screenshots" href="<%= @game.screenshot_2.url(:medium) %>"><img class="preview-image" src="<%= @game.screenshot_2.url(:thumb) %>" /></a>
+					<a class="fancybox" rel="screenshots" href="<%= @game.screenshot_3.url(:medium) %>"><img class="preview-image" src="<%= @game.screenshot_3.url(:thumb) %>" /></a>
+					<a class="fancybox" rel="screenshots" href="<%= @game.screenshot_4.url(:medium) %>"><img class="preview-image" src="<%= @game.screenshot_4.url(:thumb) %>" /></a>
+					<a class="fancybox" rel="screenshots" href="<%= @game.screenshot_5.url(:medium) %>><img class="preview-image" src="<%= @game.screenshot_5.url(:thumb) %>" /></a>
 				</p>
 				<p><a id="play-button" class="btn btn-primary btn-large">PLAY NOW &raquo;</a>
 				</p>
