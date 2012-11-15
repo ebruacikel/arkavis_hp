@@ -35,3 +35,8 @@
 .clear-left{
 	clear: left;
 }
+
+hr {
+background-color: #BFBFBF;
+height: 1px;
+}

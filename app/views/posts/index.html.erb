@@ -6,9 +6,9 @@
    <p><%=  post.created_at.strftime("%B %d, %Y")%></p>
    
     <div class="post-body">
-      <%=raw truncate( simple_format(post.body), :length => 200)%> <br />
+      <%=raw truncate( simple_format(post.body), :length => 200)%> <br /> 
     </div>
- 
+ 	<hr />
    <% end %>
 
 <br />
