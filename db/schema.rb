@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121115022713) do
+ActiveRecord::Schema.define(:version => 20121116065935) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -59,6 +59,14 @@ ActiveRecord::Schema.define(:version => 20121115022713) do
     t.string   "screenshot_5_content_type"
     t.integer  "screenshot_5_file_size"
     t.datetime "screenshot_5_updated_at"
+    t.string   "swf_file_file_name"
+    t.string   "swf_file_content_type"
+    t.integer  "swf_file_file_size"
+    t.datetime "swf_file_updated_at"
+    t.string   "unity3d_file_file_name"
+    t.string   "unity3d_file_content_type"
+    t.integer  "unity3d_file_file_size"
+    t.datetime "unity3d_file_updated_at"
   end
 
   create_table "jobs", :force => true do |t|

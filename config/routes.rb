@@ -1,7 +1,13 @@
 ArkavisHp::Application.routes.draw do
   devise_for :admins
 
-  resources :games,       :only => [:show]
+  resources :games,       :only => [:show] do
+    member do
+      get "play_swf"
+      get "play_unity"
+    end
+  end
+
   resources :jobs,        :only => [:index]
   resources :categories,  :only => [:show]
   resources :pages,       :only => [:show] 
