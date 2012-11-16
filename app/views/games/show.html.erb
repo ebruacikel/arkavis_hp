@@ -24,10 +24,11 @@
 					<a class="fancybox" rel="screenshots" href="<%= @game.screenshot_4.url(:medium) %>"><img class="preview-image" src="<%= @game.screenshot_4.url(:thumb) %>" /></a>
 					<a class="fancybox" rel="screenshots" href="<%= @game.screenshot_5.url(:medium) %>"><img class="preview-image" src="<%= @game.screenshot_5.url(:thumb) %>" /></a>
 				</p>
-			
-				<p><a id="play-button" class="btn btn-primary btn-large">PLAY NOW &raquo;</a>
+				
+				<p>
+					<a id="play-swf-button" class="btn btn-primary btn-large"  href="#play">PLAY NOW &raquo;</a>
 				</p>
-			</div>
+			
 			<div class="row-fluid">
 				<div class="span20">
 					<h2>about</h2>
@@ -56,5 +57,24 @@
 		</div><!--/span-->
 	</div><!--/row-->
 </div><!--/.fluid-container-->
-
+<% content_for :bottom do %>
+<script type="text/javascript" charset="utf-8">
+	
+$(function(){
+	$("#play-swf-button").click(function() {
+		$.fancybox({
+			'href':'<%= @game.swf_file %>',
+			'autoDimensions': false,
+			'width'      : 670,
+			'height'      : 500,
+			'autoScale'     : false,
+			'transitionIn'    : 'none',
+			'transitionOut'   : 'none',
+			'centerOnScroll'  : true,
+			'type'        : 'iframe'
+		});
+	});
+})
+</script>
+<% end %>
 

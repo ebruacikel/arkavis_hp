@@ -20,8 +20,14 @@
   <%= @game.features %>
 </p>
 
-
-<p >
+<hr />
+<p>
+  <b>Game Uploads:</b>
+	<p>Swf_File: <%= @game.swf_file_file_name %></p>
+	<p>Unity3d_File: <%= @game.unity3d_file_file_name %></p>
+</p>
+<hr />
+<p>
   <b>Sreenshots:</b>
   
  	 <p class="float-left"><%= image_tag @game.screenshot_1.url(:thumb) %> <br /> <%= @game.screenshot_1_file_name %>;</p>

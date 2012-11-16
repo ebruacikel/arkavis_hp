@@ -33,16 +33,8 @@
 			<%= render "general/footer" %>		
 		</div> <!-- /container -->
 	</div>
+	<script src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-1.7-development-only.js" type="text/javascript" charset="utf-8"></script>
 	<%= javascript_include_tag "application" %>
-	<script type="text/javascript">
-	$(function(){
-  	/*
-		$('#outer').hide();
-		$('#menu').hide();
-		$('#menu').slideDown(1000);
-		$('#outer').fadeIn(1000);
-		*/
-	})
-	</script>
+	<%= yield :bottom %>
 </body>
 </html>
