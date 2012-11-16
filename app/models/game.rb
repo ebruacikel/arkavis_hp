@@ -1,7 +1,7 @@
 class Game < ActiveRecord::Base
   
    has_attached_file :screenshot_1, styles: {
-    thumb: '150x110',
+    thumb: '100x110',
     medium: '640x480'
   }
      has_attached_file :screenshot_2, styles: {
