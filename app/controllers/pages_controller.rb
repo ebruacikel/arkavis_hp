@@ -10,11 +10,6 @@ class PagesController < ApplicationController
     end
   end
 
-  def show_only_with_category
-    @pages = Page.where(:category => params[:category] )
-  	render "index"
-  end
-
   def show
     @page = Page.find(params[:id])
   end

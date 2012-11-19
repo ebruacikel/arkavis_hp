@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 	before_filter :load_all_pages_for_menu, :load_all_games_for_menu, :load_all_jobs_for_menu, :load_all_posts_for_menu
 
 	def load_all_pages_for_menu
-		@all_pages = Page.all
+		@all_pages_ordered = Page.order("weight ASC")
 	end
 	def load_all_games_for_menu
 		@all_games = Game.all

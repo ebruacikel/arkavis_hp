@@ -3,7 +3,7 @@ class Admin::PagesController < ApplicationController
   layout "admin"
 
   def index
-    @pages = Page.order("id DESC").page(params[:page]).per(10)
+    @pages = Page.order("weight ASC").page(params[:page]).per(10)
 
     respond_to do |format|
       format.html # index.html.erb
