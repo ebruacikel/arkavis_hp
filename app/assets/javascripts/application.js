@@ -15,6 +15,12 @@
 //= require_tree .
 
 
-$(function(){
+
+
+$(function() {
 	$(".fancybox").fancybox();
-})
+	//$("#sb-slider").slicebox();
+		
+});
+
+

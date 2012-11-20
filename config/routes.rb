@@ -20,6 +20,7 @@ ArkavisHp::Application.routes.draw do
     resources :jobs
   end
   match 'admin' => 'admin::home#index'
+  match 'test' => 'home#test'
   
 	root :to => 'home#index'
   
