@@ -35,12 +35,12 @@
 	z-index: 1000;
 	position: absolute;
 	background: #CBBFAE;
-	background: rgba(190,176,155, 0.4);
+	background: rgba(255,255,255, 0.1);
 	border-left: 4px solid rgba(255,255,255,0.7);
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	filter: alpha(opacity=0);	
 	opacity: 0;
-	color: #fff;
+	color: #FCFCFC;
 
 	-webkit-transition: all 200ms;
 	-moz-transition: all 200ms;
@@ -58,7 +58,7 @@
 .sb-slider li.sb-current .sb-description:hover {
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=99)";
 	filter: alpha(opacity=99);	
-	background: rgba(190,176,155, 0.7);
+	background: rgba(255,255,255, 0.4);
 }
 
 .sb-perspective {

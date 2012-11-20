@@ -11,7 +11,7 @@
 <% @pages.each do |page| %>
   <tr>
     <td><%= link_to(page.title, page ) %></td>
-    <td><%= page.body %></td>
+    <td><%= raw page.body %></td>
     <td><%= page.featured %></td>
     <td>
 	    <%= link_to 'Show', admin_page_path(page) %>

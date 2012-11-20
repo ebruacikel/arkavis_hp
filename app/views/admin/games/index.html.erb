@@ -13,8 +13,8 @@
   <tr>
     <td><%= game.title %></td>
     <td><%= game.slogan %></td>
-    <td><%= game.about %></td>
-    <td><%= game.features %></td>
+    <td><%= raw game.about %></td>
+    <td><%= raw game.features %></td>
     <td>
     	<%= link_to 'Show', admin_game_path(game) %>
     	<%= link_to 'Edit', edit_admin_game_path(game) %>
