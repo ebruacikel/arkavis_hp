@@ -48,8 +48,11 @@
 	})
 	</script>
 	
-<script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
-<script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
+<script type="text/javascript">bkLib.onDomLoaded(function(){
+    //new nicEditor({iconsPath : "/assets/nicEditorIcons.gif", buttonList : ['bold','italic','underline','left','center','right','justify','ol','ul','strikeThrough','subscript','superscript','removeformat','indent','outdent','hr','fontSize','fontFamily','fontFormat','image','link','unlink']}).panelInstance('game_about');
+	nicEditors.allTextAreas({iconsPath : "/assets/nicEditorIcons.gif", buttonList : ['bold','italic','underline','left','center','right','justify','ol','ul','indent','outdent','hr','fontSize','fontFamily','fontFormat','image','link','unlink','subscript','superscript','removeformat']});
+	});
+</script>
 
 </body>
 </html>
