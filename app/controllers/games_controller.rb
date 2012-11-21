@@ -1,4 +1,5 @@
 class GamesController < ApplicationController
+    
   def show
     @all_games = Game.all
     @game = Game.find(params[:id])
@@ -13,4 +14,5 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
     render :layout=>false
   end
+
 end

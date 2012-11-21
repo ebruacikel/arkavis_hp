@@ -1,76 +1,102 @@
 <%= form_for(@game, :url => send_to_url) do |f| %>
-  <% if @game.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@game.errors.count, "error") %> prohibited this game from being saved:</h2>
+<% if @game.errors.any? %>
+<div id="error_explanation">
+	<h2><%= pluralize(@game.errors.count, "error") %> prohibited this game from being saved:</h2>
 
-      <ul>
-      <% @game.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+	<ul>
+		<% @game.errors.full_messages.each do |msg| %>
+		<li>
+			<%= msg %>
+		</li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
 
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :slogan %><br />
-    <%= f.text_field :slogan %>
-  </div>
-  <div class="field">
-    <%= f.label :genre %><br />
-    <%= f.text_field :genre %>
-  </div>
-  <div class="field">
-    <%= f.label :about %><br />
-    <%= f.text_area :about , :rows=>10, :style => "width:520px;"%>
-  </div>
-  <div class="field">
-    <%= f.label :features %><br />
-    <%= f.text_area :features, :rows=>10, :style => "width:520px;" %>
-  </div>
-  
-  <hr />
-	<h4>Game Upload</h4>
+<div class="field">
+	<%= f.label :title %>
+	<br />
+	<%= f.text_field :title %>
+</div>
+<div class="field">
+	<%= f.label :slogan %>
+	<br />
+	<%= f.text_field :slogan %>
+</div>
+<div class="field">
+	<%= f.label :genre %>
+	<br />
+	<%= f.text_field :genre %>
+</div>
+<div class="field">
+	<%= f.label :about %>
+	<br />
+	<%= f.text_area :about , :rows=>10, :style => "width:520px;"%>
+</div>
+<div class="field">
+	<%= f.label :features %>
+	<br />
+	<%= f.text_area :features, :rows=>10, :style => "width:520px;" %>
+</div>
 
-	<div class="field">
-		<%= @game.swf_file_file_name %>
-		<p>Swf_File:  <%= f.file_field :swf_file %></p>
-	</div>
-	<div class="field">
-		<p>Unity3d_File:  <%= f.file_field :unity3d_file %></p>
-	</div>
- <hr />
- 
- <h4>Screenshots Upload</h4>
-  <div class="field">
-  	<%= image_tag @game.screenshot_1.url(:thumb) %>
-  <%= f.label :screenshot_1 %><br />
-  <%= f.file_field :screenshot_1 %>
-  </div>
-  <div class="field">
-  	<%= image_tag @game.screenshot_2.url(:thumb) %>
-  <%= f.label :screenshot_2 %><br />
-  <%= f.file_field :screenshot_2 %>
-  </div>
-    <div class="field">
-  	<%= image_tag @game.screenshot_3.url(:thumb) %>
-  <%= f.label :screenshot_3 %><br />
-  <%= f.file_field :screenshot_3 %>
-  </div>
-    <div class="field">
-  	<%= image_tag @game.screenshot_4.url(:thumb) %>
-  <%= f.label :screenshot_4 %><br />
-  <%= f.file_field :screenshot_4 %>
-  </div>
-    <div class="field">
-  	<%= image_tag @game.screenshot_5.url(:thumb) %>
-  <%= f.label :screenshot_5 %><br />
-  <%= f.file_field :screenshot_5 %>
-  </div>  
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<hr />
+<h4>Game Upload</h4>
+
+<div class="field">
+	<%= @game.cover_screen_file_name %>
+	<p>
+		Cover Screen:  <%= f.file_field :cover_screen %>
+	</p>
+</div>
+
+<div class="field">
+	<p>Weight:</p><%= f.text_field :weight, :placeholder=>"Insert a weight for slicebox!"%>
+</div>
+<div class="field">
+	<%= @game.swf_file_file_name %>
+	<p>
+		Swf_File:  <%= f.file_field :swf_file %>
+	</p>
+</div>
+<div class="field">
+	<p>
+		Unity3d_File:  <%= f.file_field :unity3d_file %>
+	</p>
+</div>
+<hr />
+
+<h4>Screenshots Upload</h4>
+<div class="field">
+	<%= image_tag @game.screenshot_1.url(:thumb) %>
+	<%= f.label :screenshot_1 %>
+	<br />
+	<%= f.file_field :screenshot_1 %>
+</div>
+<div class="field">
+	<%= image_tag @game.screenshot_2.url(:thumb) %>
+	<%= f.label :screenshot_2 %>
+	<br />
+	<%= f.file_field :screenshot_2 %>
+</div>
+<div class="field">
+	<%= image_tag @game.screenshot_3.url(:thumb) %>
+	<%= f.label :screenshot_3 %>
+	<br />
+	<%= f.file_field :screenshot_3 %>
+</div>
+<div class="field">
+	<%= image_tag @game.screenshot_4.url(:thumb) %>
+	<%= f.label :screenshot_4 %>
+	<br />
+	<%= f.file_field :screenshot_4 %>
+</div>
+<div class="field">
+	<%= image_tag @game.screenshot_5.url(:thumb) %>
+	<%= f.label :screenshot_5 %>
+	<br />
+	<%= f.file_field :screenshot_5 %>
+</div>
+<div class="actions">
+	<%= f.submit %>
+</div>
 <% end %>

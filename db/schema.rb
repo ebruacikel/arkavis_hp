@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121119034210) do
+ActiveRecord::Schema.define(:version => 20121121050206) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -67,6 +67,11 @@ ActiveRecord::Schema.define(:version => 20121119034210) do
     t.string   "unity3d_file_content_type"
     t.integer  "unity3d_file_file_size"
     t.datetime "unity3d_file_updated_at"
+    t.string   "cover_screen_file_name"
+    t.string   "cover_screen_content_type"
+    t.integer  "cover_screen_file_size"
+    t.datetime "cover_screen_updated_at"
+    t.integer  "weight"
   end
 
   create_table "jobs", :force => true do |t|

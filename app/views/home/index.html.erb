@@ -2,36 +2,18 @@
 	<div class="wrapper">
 		<ul id="sb-slider" class="sb-slider">
 			<li>
-				<a href="assets/logo.jpg" target="_blank"><img src="http://arkavis.com/1.jpg" alt="logo"/></a>
+				<img src="https://s3.amazonaws.com/arkavishp/logo.jpg" alt="logo"/>			
 			</li>
+			
+			<% @all_games.each do |game| %>
 			<li>
-				<a href="assets/1.jpg" target="_blank"><img src="assets/deepo.jpg" alt="deepo"/></a>
+				<a href="game.cover_screen.url" target="_blank"><img src="<%= game.cover_screen.url(:normal) %>" alt="<%= game.cover_screen_file_name %>"/></a>
 				<div class="sb-description">
-					<h3>Deepo</h3>
+					<h3><%= game.title %></h3>
 				</div>
 			</li>
-			<li>
-				<a href="asstets/3.jpg" target="_blank"><img src="assets/icesmash.jpg" alt="icesmash"/></a>
-				<div class="sb-description">
-					<h3>IceSmash</h3>
-				</div>
-			</li>
-			<li>
-				<a href="assets/1.jpg" target="_blank"><img src="assets/roboracers.jpg" alt="roboracers"/></a>
-				<div class="sb-description">
-					<h3>RoboRacers</h3>
-				</div>
-			</li>
-		</ul>
-		<div id="nav-arrows" class="nav-arrows">
-			<a href="#">Next</a>
-			<a href="#">Previous</a>
-		</div>
-
-		<div id="nav-options" class="nav-options">
-			<span id="navPlay">Play</span>
-			<span id="navPause">Pause</span>
-		</div>
+			<% end %>
+			</ul>
 	</div><!-- /wrapper -->
 </div>
 
@@ -68,7 +50,7 @@
 
 							},
 							orientation : 'v',
-							cuboidsCount : 9,
+							cuboidsCount : 7,
 	     
 					}), init = function() {
 

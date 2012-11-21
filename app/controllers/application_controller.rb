@@ -16,5 +16,5 @@ class ApplicationController < ActionController::Base
   def load_all_posts_for_menu
     @all_posts = Post.all
   end
-	
+   
 end
