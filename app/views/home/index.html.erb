@@ -5,9 +5,9 @@
 				<a href="assets/logo.jpg" target="_blank"><img src="assets/logo.jpg" alt="logo"/></a>
 			</li>
 			<li>
-				<a href="assets/1.jpg" target="_blank"><img src="assets/deeppo.jpg" alt="deeppo"/></a>
+				<a href="assets/1.jpg" target="_blank"><img src="assets/deepo.jpg" alt="deepo"/></a>
 				<div class="sb-description">
-					<h3>Deeppo</h3>
+					<h3>Deepo</h3>
 				</div>
 			</li>
 			<li>
@@ -23,9 +23,6 @@
 				</div>
 			</li>
 		</ul>
-
-		<div id="shadow" class="shadow"></div>
-
 		<div id="nav-arrows" class="nav-arrows">
 			<a href="#">Next</a>
 			<a href="#">Previous</a>
@@ -35,16 +32,12 @@
 			<span id="navPlay">Play</span>
 			<span id="navPause">Pause</span>
 		</div>
-
 	</div><!-- /wrapper -->
 </div>
 
-<!-- Main hero unit for a primary marketing message or call to action -->
-<div class="hero-unit" >
-   <h1><img src="/assets/blank.PNG"></h1>
-</div>
+<!-- Hack to fix slicebox -->
+ <img style="height:1px"src="/assets/blank.PNG">
 
-<!-- Example row of columns -->
 <div class="row">
 <% @games.each do |game| %>
   <div class="span4">
