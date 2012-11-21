@@ -24,4 +24,8 @@ class Game < ActiveRecord::Base
   has_attached_file :swf_file
   has_attached_file :unity3d_file
   
+  has_attached_file :cover_screen, styles: {
+    normal: '700x420'
+  }
+  
 end
