@@ -1,5 +1,5 @@
 ArkavisHp::Application.routes.draw do
-  devise_for :admins, :controllers => { :sessions => "admin/sessions" }
+  devise_for :admins, :controllers => { :sessions => "admin/sessions" }, :skip => [:registration]
 
   resources :games,       :only => [:show] do
     member do
